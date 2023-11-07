@@ -1,5 +1,8 @@
 import React from "react";
 import SuggestionCard from "./SuggestionCard";
+import { AiOutlineLike, AiFillLike, AiOutlineDislike } from "react-icons/ai";
+import { PiShareFatDuotone } from "react-icons/pi";
+import { HiDownload } from "react-icons/hi";
 
 const VideoPage = () => {
   return (
@@ -15,22 +18,36 @@ const VideoPage = () => {
         ></iframe>
 
         <div className="description">
-          <img className="channelImage" src="https://robohash.org/20" alt="" />
-
-          <div className="channelText">
-            <p>Channel Name</p>
-            <p>293K</p>
+          <div className="mixed-group">
+            <img
+              className="channelImage"
+              src="https://robohash.org/20"
+              alt=""
+            />
+            <div className="channelText">
+              <p className="title">Channel Name</p>
+              <p className="faded">293K</p>
+            </div>
+            <button className="subscribe-button">Subscribe</button>
           </div>
 
-          <button className="subscribe-button">Subscribe</button>
+          <div className="button-group">
+            <button className="pill">
+              <AiOutlineLike size={20} /> | <AiOutlineDislike size={20} />
+            </button>
+            <button className="pill">
+              <PiShareFatDuotone size={20} /> Share
+            </button>
+            <button className="download-pill">
+              <HiDownload size={20} /> Download
+            </button>
+          </div>
         </div>
 
         <br />
 
         <div className="description-text">
-          <p>
-            <b>92K views 5 months ago</b>
-          </p>
+          <p className="title">92K views 5 months ago</p>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
         </div>
       </div>

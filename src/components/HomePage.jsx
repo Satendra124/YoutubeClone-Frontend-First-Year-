@@ -1,28 +1,17 @@
 import React from "react";
 import VideoCard from "./VideoCard";
+import SideBar from "./SideBar";
+import videos from "../data/videos";
 
 const HomePage = () => {
   return (
     <div className="main-flex-container">
       <div className="page">
-        <div className="sidebar">
-          <ul>
-            <p>Home</p>
-            <p>Shorts</p>
-            <p>Subscriptions</p>
-            <p>You</p>
-            <p>History</p>
-          </ul>
-        </div>
+        <SideBar />
         <div className="main">
-          <VideoCard />
-          <VideoCard />
-          <VideoCard />
-          <VideoCard />
-          <VideoCard />
-          <VideoCard />
-          <VideoCard />
-          <VideoCard />
+          {videos.map((video_from_js) => (
+            <VideoCard video={video_from_js} />
+          ))}
         </div>
       </div>
     </div>
