@@ -8,6 +8,7 @@ const HomePage = () => {
     <div className="main-flex-container">
       <div className="page">
         <SideBar />
+
         <div className="main">
           {videos.map((video_from_js) => (
             <VideoCard video={video_from_js} />
